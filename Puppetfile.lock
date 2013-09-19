@@ -1,0 +1,52 @@
+FORGE
+  remote: http://forge.puppetlabs.com
+  specs:
+    example42/firewall (2.1.2)
+      example42/iptables (>= 2.0.0)
+      example42/puppi (>= 2.0.0)
+    example42/iptables (2.1.1)
+      example42/puppi (>= 2.0.0)
+      ripienaar/concat (>= 0.0.1)
+    example42/monitor (2.0.1)
+      example42/puppi (>= 2.0.0)
+    example42/puppi (2.1.1)
+    puppetlabs/apache (0.9.0)
+      puppetlabs/concat (>= 1.0.0)
+      puppetlabs/stdlib (>= 2.4.0)
+    puppetlabs/apt (1.3.0)
+      puppetlabs/stdlib (>= 2.2.1)
+    puppetlabs/concat (1.0.0-rc1)
+    puppetlabs/mysql (0.9.0)
+      puppetlabs/stdlib (>= 2.2.1)
+    puppetlabs/stdlib (4.1.0)
+    ripienaar/concat (0.2.0)
+    saz/php (1.0.4)
+
+GIT
+  remote: git@github.com:example42/puppet-redis.git
+  ref: master
+  sha: b815141e7b13a57c78be43bd0af5ad20d112b3c6
+  specs:
+    redis (2.0.7)
+      example42/firewall (>= 2.0.0)
+      example42/monitor (>= 2.0.0)
+      example42/puppi (>= 2.0.0)
+
+GIT
+  remote: git@github.com:netmanagers/puppet-varnish.git
+  ref: master
+  sha: c017f77cf1c2dfb4cf2a582b05690531ca8cd213
+  specs:
+    varnish (1.0.3)
+      example42/firewall (>= 2.0.0)
+      example42/monitor (>= 2.0.0)
+      example42/puppi (>= 2.0.0)
+
+DEPENDENCIES
+  puppetlabs/apache (>= 0)
+  puppetlabs/apt (>= 0)
+  puppetlabs/mysql (>= 0)
+  redis (>= 0)
+  saz/php (>= 0)
+  varnish (>= 0)
+

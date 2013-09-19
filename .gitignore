@@ -1,0 +1,6 @@
+.tmp
+.librarian
+.vagrant
+
+/modules/*
+!/modules/udev/
