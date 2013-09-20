@@ -1,15 +1,6 @@
 FORGE
   remote: http://forge.puppetlabs.com
   specs:
-    example42/firewall (2.1.2)
-      example42/iptables (>= 2.0.0)
-      example42/puppi (>= 2.0.0)
-    example42/iptables (2.1.1)
-      example42/puppi (>= 2.0.0)
-      ripienaar/concat (>= 0.0.1)
-    example42/monitor (2.0.1)
-      example42/puppi (>= 2.0.0)
-    example42/puppi (2.1.1)
     puppetlabs/apache (0.9.0)
       puppetlabs/concat (>= 1.0.0)
       puppetlabs/stdlib (>= 2.4.0)
@@ -19,28 +10,21 @@ FORGE
     puppetlabs/mysql (0.9.0)
       puppetlabs/stdlib (>= 2.2.1)
     puppetlabs/stdlib (4.1.0)
-    ripienaar/concat (0.2.0)
     saz/php (1.0.4)
 
 GIT
-  remote: git@github.com:example42/puppet-redis.git
+  remote: git@github.com:jbussdieker/puppet-redis.git
   ref: master
-  sha: b815141e7b13a57c78be43bd0af5ad20d112b3c6
+  sha: 9b717cbed264d2af055631fe50889e38ab9b7d36
   specs:
-    redis (2.0.7)
-      example42/firewall (>= 2.0.0)
-      example42/monitor (>= 2.0.0)
-      example42/puppi (>= 2.0.0)
+    redis (0.0.2)
 
 GIT
-  remote: git@github.com:netmanagers/puppet-varnish.git
+  remote: git@github.com:jbussdieker/puppet-varnish.git
   ref: master
-  sha: c017f77cf1c2dfb4cf2a582b05690531ca8cd213
+  sha: 9b2ecdea71ff13c0b6deda85a93843068b541271
   specs:
-    varnish (1.0.3)
-      example42/firewall (>= 2.0.0)
-      example42/monitor (>= 2.0.0)
-      example42/puppi (>= 2.0.0)
+    varnish (0.0.2)
 
 DEPENDENCIES
   puppetlabs/apache (>= 0)

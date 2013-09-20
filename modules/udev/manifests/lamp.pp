@@ -18,11 +18,23 @@ class udev::lamp {
     require      => Apt::Source['mariadb'],
   }
 
-  class { 'mysql::php':
-    require => Apt::Source['mariadb'],
-  }
-
   class { 'php': }
 
-  class { 'php::apache2': }
+  php::conf { 'pdo': }
+
+  php::module { 'mysql': }
+  php::module { 'gd': }
+
+  class { 'apache':
+    default_vhost => false,
+    mpm_module    => 'prefork',
+  }
+
+  apache::mod { 'php5': }
+  apache::mod { 'rewrite': }
+
+  apache::vhost { 'whildcard':
+    port    => '80',
+    docroot => '/var/www/',
+  }
 }

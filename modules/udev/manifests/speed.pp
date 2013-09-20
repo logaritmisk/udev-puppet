@@ -1,12 +1,13 @@
-class udev::speed {
-  class { 'apache':
+class udev::speed inherits udev::lamp {
+  Class['apache'] {
     default_vhost => false,
   }
 
   apache::listen { '8080': }
 
   class { 'varnish':
-    backendport => 8080,
-    port        => 80,
+    port => 80,
   }
+
+  class { 'redis': }
 }
