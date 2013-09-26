@@ -1,3 +1,3 @@
 classes:
   - 'udev::std'
-  - 'udev::standard'
+  - 'udev::speed'

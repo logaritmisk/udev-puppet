@@ -9,7 +9,6 @@ class udev::lamp {
 
   class { 'mysql::server':
     package_name  => 'mariadb-server',
-    root_password => 'toor',
     require       => Apt::Source['mariadb'],
   }
 
@@ -24,10 +23,4 @@ class udev::lamp {
 
   apache::mod { 'php5': }
   apache::mod { 'rewrite': }
-
-  apache::vhost { 'whildcard':
-    port            => '80',
-    docroot         => '/var/www/',
-    custom_fragment => "AllowOverride All\nAccessFileName .htaccess",
-  }
 }
