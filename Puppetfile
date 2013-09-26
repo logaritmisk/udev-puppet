@@ -10,7 +10,7 @@ mod 'apache',
   git: 'git@github.com:puppetlabs/puppetlabs-apache.git'
 
 mod 'php',
-  git: 'git@github.com:saz/puppet-php.git'
+  git: 'git@github.com:example42/puppet-php.git'
 
 mod 'varnish',
   git: 'git@github.com:jbussdieker/puppet-varnish.git'

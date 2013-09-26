@@ -1,16 +1,17 @@
 FORGE
   remote: http://forge.puppetlabs.com
   specs:
-    puppetlabs/apache (0.9.0)
-      puppetlabs/concat (>= 1.0.0)
-      puppetlabs/stdlib (>= 2.4.0)
-    puppetlabs/apt (1.3.0)
-      puppetlabs/stdlib (>= 2.2.1)
+    example42/puppi (2.1.1)
     puppetlabs/concat (1.0.0-rc1)
-    puppetlabs/mysql (0.9.0)
-      puppetlabs/stdlib (>= 2.2.1)
     puppetlabs/stdlib (4.1.0)
-    saz/php (1.0.4)
+
+GIT
+  remote: git@github.com:example42/puppet-php.git
+  ref: master
+  sha: b8f2e3f3dbeefa2e42eb5cbd35a2576cd11b14e3
+  specs:
+    php (2.0.11)
+      example42/puppi (>= 2.0.0)
 
 GIT
   remote: git@github.com:jbussdieker/puppet-redis.git
@@ -26,11 +27,36 @@ GIT
   specs:
     varnish (0.0.2)
 
+GIT
+  remote: git@github.com:puppetlabs/puppetlabs-apache.git
+  ref: master
+  sha: 61e4de56dfc4c218c4e3bc2ba3461af0391156b0
+  specs:
+    apache (0.9.0)
+      puppetlabs/concat (>= 1.0.0)
+      puppetlabs/stdlib (>= 2.4.0)
+
+GIT
+  remote: git@github.com:puppetlabs/puppetlabs-apt.git
+  ref: master
+  sha: 3e3de6ee924ea75463e9df4ffdb5712c0e145403
+  specs:
+    apt (1.3.0)
+      puppetlabs/stdlib (>= 2.2.1)
+
+GIT
+  remote: git@github.com:puppetlabs/puppetlabs-mysql.git
+  ref: master
+  sha: e0c4434815bbe0dc6851d9c40c1ba8cd84c73942
+  specs:
+    mysql (1.0.0)
+      puppetlabs/stdlib (>= 2.2.1)
+
 DEPENDENCIES
-  puppetlabs/apache (>= 0)
-  puppetlabs/apt (>= 0)
-  puppetlabs/mysql (>= 0)
+  apache (>= 0)
+  apt (>= 0)
+  mysql (>= 0)
+  php (>= 0)
   redis (>= 0)
-  saz/php (>= 0)
   varnish (>= 0)
 

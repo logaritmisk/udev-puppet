@@ -7,23 +7,15 @@ class udev::lamp {
     key_server        => 'keyserver.ubuntu.com',
   }
 
-  class { 'mysql':
-    client_package_name => 'mariadb-client',
-    server_package_name => 'mariadb-server',
-    require             => Apt::Source['mariadb'],
-  }
-
   class { 'mysql::server':
-    config_hash  => { 'root_password' => 'toor' },
-    require      => Apt::Source['mariadb'],
+    package_name  => 'mariadb-server',
+    root_password => 'toor',
+    require       => Apt::Source['mariadb'],
   }
 
   class { 'php': }
 
-  php::conf { 'pdo': }
-
-  php::module { 'mysql': }
-  php::module { 'gd': }
+  php::module { [ 'mysql', 'gd', ]: }
 
   class { 'apache':
     default_vhost => false,
@@ -34,7 +26,8 @@ class udev::lamp {
   apache::mod { 'rewrite': }
 
   apache::vhost { 'whildcard':
-    port    => '80',
-    docroot => '/var/www/',
+    port            => '80',
+    docroot         => '/var/www/',
+    custom_fragment => "AllowOverride All\nAccessFileName .htaccess",
   }
 }
